@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+	<Title> QuickBite Food Delivery App </title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-danger fixed-top" data-bs-theme="light">
+		<div class="container-fluid">
+			<img src="QuickBite.png" class="navbar-brand" width="200" alt="QuickBite">
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-label="Toggle menu">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="menu">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link active" href="#Restaurants">Restaurants</a></li>
+					<li class="nav-item"><a class="nav-link" href="#menu-section">Menu</a></li>
+					<li class="nav-item"><a class="nav-link" href="#checkout">Checkout</a></li>
+					<li class="nav-item"><a class="nav-link" href="#track-order">Track Order</a></li>				
+				</ul>
+			</div>	
+		</div>
+	</nav>
+	<h3 class="text-center fw-bold fst-italic text-danger">Offers</h3>
+	<div id="offers" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#offers" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#offers" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#offers" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-bs-interval="5000">
+				<img src="Biryani.jpg" class="d-block w-100 h-100" alt="Briyani">
+				<div class="carousel-caption text-start">
+					<h2>50% OFF on Biryani!!!</h2>
+					<p>Make your day delicious. Get half off your favourite Biryani!</p>
+					<a class="btn btn-danger btn-lg" href="#menu-section">Order now</a>
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="5000">
+				<img src="Indian_Thaali.jpg" class="d-block w-100 h-100" alt="Indian_Thaali">
+				<div class="carousel-caption text-start">
+					<h2>Free delivery above Rs.299!</h2>
+					<p>Add your favourites to the basket and delivery is on us.</p>
+					<a class="btn btn-danger btn-lg" href="#Restaurants">Explore Restaurants</a>
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="5000">
+				<img src="Desserts.jpeg" class="d-block w-100 h-100" alt="Desserts">					<div class="carousel-caption text-start">
+					<h2>Desserts at Rs. 99!</h2>
+					<p>Save a little room for a sweet treat, now just Rs. 99.</p>
+					<a class="btn btn-danger btn-lg" href="#Restaurants">Find Desserts</a>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#offers" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#offers" data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</button>
+	</div>
+	<section id="Restaurants" class="container py-5">
+		<div class="d-flex justify-content-between align-items-center">
+			<h2 class="text-danger fst-italic mb-0">Restaurants Near You</h2>
+			<div class="btn-group" aria-label="Filter Restaurants">
+				<button type="button" class="btn btn-outline-primary active">All</button>
+				<button type="button" class="btn btn-outline-success">Veg</button>
+				<button type="button" class="btn btn-outline-danger">Non-Veg</button>
+			</div>
+		</div>
+		<div class="row g-4">
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="card">
+					<img src="Pizza.webp" class="card-img-top" alt="Pizza">
+					<div class="card-body d-flex flex-column">
+						<div class="d-flex justify-content-between align-items-start gap-2">
+							<h5 class="card-title h-5">Oven Daze</h5>
+							<span class="badge text-bg-success">4.5★</span>
+						</div>
+						<p class="card-text mb-2">Italian, Pizza · 25-30 min</p>
+						<span class="badge text-bg-primary align-self-start mb-3">All</span>
+						<a href="#menu-section" class="btn btn-danger ">View Menu</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="card">
+					<img src="Salads.jpg" class="card-img-top" alt="Salads">
+					<div class="card-body d-flex flex-column">
+						<div class="d-flex justify-content-between align-items-start gap-2">
+							<h5 class="card-title h-5">Green Bowl</h5>
+							<span class="badge text-bg-success">4.7★</span>
+						</div>
+						<p class="card-text mb-2">Healthy, Salads · 20-25 min</p>
+						<span class="badge text-bg-success align-self-start mb-3">Veg</span>
+						<a href="#menu-section" class="btn btn-danger ">View Menu</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="card">
+					<img src="Biryani_rest.jpg" class="card-img-top" alt="Biryani">
+					<div class="card-body d-flex flex-column">
+						<div class="d-flex justify-content-between align-items-start gap-2">
+							<h5 class="card-title h-5">The Biryani Theory</h5>
+							<span class="badge text-bg-success">4.3★</span>
+						</div>
+						<p class="card-text mb-2">Indian, Biryani · 30-35 min</p>
+						<span class="badge text-bg-danger align-self-start mb-3">Non-Veg</span>
+						<a href="#menu-section" class="btn btn-danger ">View Menu</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="menu-section" class="container py-5">
+		<h2 class="text-danger fst-italic mb-4">Menu, Reviews and Cart</h2>
+		<div class="row g-4">
+			<div class="col-12 col-lg-8">
+				<ul class="nav nav-tabs" id="menuReviewTabs">
+					<li class="nav-item">
+						<button class="nav-link active" id="menu-tab" data-bs-toggle="tab" data-bs-target="#menu-pane" type="button">Menu</button>
+					</li>
+					<li class="nav-item">
+						<button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews-pane" type="button">Reviews</button>
+					</li>
+				</ul>
+				<div class="tab-pane fade show active" id="menu-pane">
+					<div class="table-responsive">
+						<table class="table table-striped table-hover align-middle mb-0">
+							<thead>
+								<tr>
+									<th>Dish</th>
+									<th>Type</th>
+									<th>Price</th>
+									<th>Add</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Chicken Biryani</td>
+									<td><span class="badge text-bg-danger">Non-Veg</span></td>
+									<td>250</td>
+									<td><button type="button" class="btn btn-sm btn-danger">Add</button></td>
+								</tr>
+								<tr>
+									<td>Paneer Tikka</td>
+									<td><span class="badge text-bg-success">Veg</span></td>
+									<td>180</td>
+									<td><button type="button" class="btn btn-sm btn-danger">Add</button></td>
+								</tr>
+								<tr>
+									<td>Masala Dosa</td>
+									<td><span class="badge text-bg-success">Veg</span></td>
+									<td>120</td>
+									<td><button type="button" class="btn btn-sm btn-danger">Add</button></td>
+								</tr>
+								<tr>
+									<td>Gulab Jamun</td>
+									<td><span class="badge text-bg-success">Veg</span></td>
+									<td>99</td>
+									<td><button type="button" class="btn btn-sm btn-danger">Add</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tab-pane fade" id="reviews-pane">
+					<div class="d-flex gap-3 py-3 border-bottom">
+						<img src="Abhinaya.jpg" class="rounded-circle" width="64" height="64" alt="Abhi">
+						<div>
+							<h3 class="h6 mb-1">Abhinaya Sankar<span class="text-warning">★★★★★</span></h3>
+							<p class="mb-0">The Biryani was flavourful and arrived hot. Great portion size!</p>
+						</div>
+					</div>
+					<div class="d-flex gap-3 py-3 border-bottom">
+						<img src="Nirmal.jpg" class="rounded-circle" width="64" height="64" alt="Nirmal">
+						<div>
+							<h3 class="h6 mb-1">Nirmal Pillai<span class="text-warning">★★★★☆</span></h3>
+							<p class="mb-0">Quick delivery and the Paneer Tikka was delicous. I'll order again!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-4 col-md-4" id="cart">
+				<div class="card">
+					<div class="card-header bg-danger text-white">
+						<h2 class="h5 mb-0 fst-italic">Your Cart</h2>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item d-flex justify-content-between align-items-center">Chicken Biryani
+							<span class="badge text-bg-secondary rounded-pill">1</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-center"> Masala Dosa
+							<span class="badge text-bg-secondary rounded-pill">2</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-center">Total
+							<span>Rs.490</span>
+						</li>
+					</ul>
+					<div class="card-body">
+						<button type="button" class="btn btn-outline-danger w-100" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="top" data-bs-title="Offer terms" data-bs-content="Use BIRYANI50 for 50% off one biryani. Valid on eligible biryani orders only.">
+						Apply Offer: BIRYANI50
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="checkout" class="container py-5">
+		<h2 class="text-danger fst-italic mb-4">Checkout and Track Order</h2>
+		<div class="row g-4">
+			<div class="col-12 col-lg-6">
+				<div class="card">
+					<div class="card-body">
+						<h3 class="h4 mb-3">Delivery Details</h3>
+						<form id="order-form" class="needs-validation">
+							<div class="mb-3">
+								<label for="customer-ame" class="form-label">Name</label>
+								<input type="text" class="form-control" id="customer-name" placeholder="Enter your name" required>
+								<div class="invalid-feedback">Please enter your name.</div>
+							</div>
+							<div class="mb-3">
+								<label for="mobile-number" class="form-label">Mobile Number</label>
+								<input type="tel" class="form-control" id="mobile-number" inputmode="numeric" placeholder="Enter your mobile number" maxlength="10" required>
+								<div class="form-text">Enter exactly 10 digits.</div>
+								<div class="invalid-feedback">Enter a valid 10-digit mobile number.</div>
+							</div>
+							<div class="mb-3">
+								<label for="delivery-address" class="form-label">Delivery Address</label>
+								<textarea class="form-control" id="delivery-address" rows="3" placeholder="Enter your address" required></textarea>
+								<div class="invalid-feedback">Please enter your delivery address.</div>
+							</div>
+							<div class="mb-3">
+								<label for="payment" class="form-label">Payment Mode</label>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="payment-mode" id="UPI" required>
+									<label class="form-check-label" for="UPI">UPI</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="radio" name="payment-mode" id="Cash" required>
+									<label class="form-check-label" for="Cash">Cash on Delivery</label>
+								</div>
+								<div id="payment-error" class="invalid-feedback">Please select a payment mode.</div>
+							</div>
+							<button id="place-order" type="submit" class="btn btn-danger">
+								<span	id="order-spinner"	class="spinner-border spinner-border-sm me-2 d-none" aria-hidden="true"></span>
+								<span id="order-button-text">Place Order</span>
+							</button>
+							<button type="reset" class="btn btn-outline-secondary">Clear</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-6" id="track-order">
+				<div id="tracking-panel" class="card shadow-sm d-none" aria-live="polite">
+					<div class="card-body">
+						<h3 class="h4">Order Tracking</h3>
+						<p id="tracking-status" class="fw-semibold mb-2">Order placed</p>
+						
+						<div class="progress" role="progressbar" aria-label="Order progress" aria-valuenow="0" aria-valuemax="100">
+							<div id="tracking-progress" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:0%">0%</div>
+						</div>
+					</div>
+				</div>
+				<p id="tracking-placeholder" class="text-muted">
+					Your order progress will appear here after you place an order.
+				</p>
+			</div>
+		</div>
+	</section>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		document.querySelectorAll('[data-bs-toggle="popover"]').forEach((el) => {
+			new bootstrap.Popover(el, {
+			container: 'body',
+			trigger: 'click'
+			});
+		});
+	</script>
+	<script>
+		const orderForm = document.getElementById('order-form');
+		const orderButton = document.getElementById('place-order');
+		const orderButtonText = document.getElementById('order-button-text');
+		const orderSpinner = document.getElementById('order-spinner');
+		const paymentError = document.getElementById('payment-error');
+		const trackingPanel = document.getElementById('tracking-panel');
+		const trackingPlaceholder = document.getElementById('tracking-placeholder');
+		const trackingStatus = document.getElementById('tracking-status');
+		const trackingProgress = document.getElementById('tracking-progress');
+		const progressBar = trackingProgress.parentElement;
+		let trackingTimers = [];
+
+		orderForm.addEventListener('submit', (event) => {
+		event.preventDefault();
+		orderForm.classList.add('was-validated');
+		const paymentSelected = orderForm.querySelector(
+		'input[name="payment-mode"]:checked'
+		);
+
+		paymentError.classList.toggle('d-block', !paymentSelected);
+
+		if (!orderForm.checkValidity() || !paymentSelected) {
+		orderForm.reportValidity();
+		return;
+		}
+
+		trackingTimers.forEach(clearTimeout);
+		trackingTimers = [];
+	
+		orderButton.disabled = true;
+		orderSpinner.classList.remove('d-none');
+		orderButtonText.textContent = 'Placing order...';
+		trackingPanel.classList.add('d-none');
+		trackingPlaceholder.classList.remove('d-none');
+
+		setTimeout(() => {
+		orderSpinner.classList.add('d-none');
+		orderButtonText.textContent = 'Order placed';
+		trackingPanel.classList.remove('d-none');
+		trackingPlaceholder.classList.add('d-none');
+
+		const steps = [
+			{ progress: 25, status: 'Order placed' },
+			{ progress: 50, status: 'Preparing your food' },
+			{ progress: 75, status: 'On the way' },
+			{ progress: 100, status: 'Delivered. Enjoy your meal!' }
+		];
+
+		steps.forEach((step, index) => {
+			trackingTimers.push(setTimeout(() => {
+			trackingStatus.textContent = step.status;
+			trackingProgress.style.width = step.progress + '%';
+			trackingProgress.textContent = step.progress + '%';
+			progressBar.setAttribute('aria-valuenow', step.progress);
+
+			if (step.progress === 100) {
+				trackingProgress.classList.remove('progress-bar-animated');
+				orderButton.disabled = false;
+				orderButtonText.textContent = 'Place Order';
+			}
+			}, index * 2000));
+		});
+		}, 1500);
+	});
+
+  orderForm.addEventListener('reset', () => {
+    trackingTimers.forEach(clearTimeout);
+    trackingTimers = [];
+
+    orderForm.classList.remove('was-validated');
+    paymentError.classList.remove('d-block');
+    orderButton.disabled = false;
+    orderSpinner.classList.add('Placing Order...');
+    orderButtonText.textContent = 'Place Order';
+    trackingPanel.classList.add('d-none');
+    trackingPlaceholder.classList.remove('d-none');
+    trackingStatus.textContent = 'Order placed';
+    trackingProgress.style.width = '0%';
+    trackingProgress.textContent = '0%';
+    trackingProgress.classList.add('progress-bar-animated');
+    progressBar.setAttribute('aria-valuenow', '0');
+  });
+</script>
+	<footer class="bg-dark text-white py-4">
+		<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 text-center text-md-start">
+			<p class="mb-0">&copy; 2026 QuickBite. All rights reserved.</p>
+			<p class="mb-0">
+				Support:
+				<a href="mailto:nomnom@quickbite.com" class="text-light">
+					nomnom@quickbite.com
+				</a>
+			</p>
+			<p class="mb-0">Working hours: 8:00 AM - 11:00 PM</p>
+		</div>
+	</footer>
+</body>
+</html>
